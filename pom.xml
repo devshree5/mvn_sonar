@@ -108,7 +108,7 @@
                 <version>1.2.1-0</version>
                 <configuration>
                     <!-- If ZAP is running on localhost, there is no need to define zapHost -->
-                    <zapHost>http://34.86.51.193</zapHost>
+                    <zapHost>http://34.93.176.204</zapHost>
                     <zapPort>8080</zapPort>
                     <targetUrl>http://34.69.103.139:8098/rest/demo</targetUrl>
                 </configuration>
