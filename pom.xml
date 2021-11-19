@@ -67,7 +67,15 @@
   <build>
   <plugins>
           <plugin>
-             <groupId>org.owasp</groupId>
+		   <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+          <plugin>
+              <groupId>org.owasp</groupId>
               <artifactId>dependency-check-maven</artifactId>
               <version>6.1.2</version>
               <executions>
@@ -114,16 +122,7 @@
                     <targetUrl>http://34.69.103.139:8098/rest/demo</targetUrl>
                 </configuration>
             </plugin>
-	   <plugin>
-          		<groupId>org.apache.maven.plugins</groupId>
-          		<artifactId>maven-surefire-plugin</artifactId>
-          		<version>3.0.0-M5</version>
-		  <configuration>
-    			<testFailureIgnore>true</testFailureIgnore>
-  		  </configuration>
-        </plugin>
-	  
-            <!-- <plugin>
+	  <!-- <plugin>
 	               <groupId>br.com.softplan.security.zap</groupId>
 	               <artifactId>zap-maven-plugin</artifactId>
 	               <version>1.2.1-0</version>
@@ -169,13 +168,7 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.14.0</version>
             </plugin>
-		
-	    <plugin>
-		    <groupId>org.owasp</groupId>
-		    <artifactId>dependency-check-maven</artifactId>
-		    <version>2.2</version>
-		</plugin>
-            <!-- Spotbugs report -->
+	    <!-- Spotbugs report -->
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
